@@ -1,7 +1,6 @@
 import streamlit as st
 import b_backend
 
-
 if 'preguntas' not in st.session_state:
     st.session_state.preguntas = []
 
@@ -18,7 +17,7 @@ def click():
 
         st.session_state.preguntas.append(pregunta)
         st.session_state.respuestas.append(respuesta)
-
+        
         # Limpiar el input de usuario después de enviar la pregunta
         st.session_state.user = ''
 
@@ -28,12 +27,14 @@ with st.form('my-form'):
 
 if st.session_state.preguntas:
     for i in range(len(st.session_state.preguntas) - 1, -1, -1):
-        message(st.session_state.preguntas[i], key=str(i))
+       st.write(st.session_state.preguntas[i], st.session_state.respuestas [i])
 
     # Opción para continuar la conversación
     continuar_conversacion = st.checkbox('Quieres hacer otra pregunta?')
     if not continuar_conversacion:
         st.session_state.preguntas = []
         st.session_state.respuestas = []
-
+    
+# cuales son los 3 países en los que tenemos más ventas totales.  Saca una tabla con el país  y su total de ventas
+# que porcentaje de las ventas totales representan las ventas de UK?
 

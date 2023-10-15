@@ -2,7 +2,7 @@
 # from langchain.sql_database import SQLDatabase
 from langchain.utilities import SQLDatabase
 #db = SQLDatabase.from_uri("sqlite:////ecommerce.db")
-db_uri = "sqlite:////Users/javier/OpenAI-projects/Chatdatabase/ecommerce.db"
+db_uri = "sqlite://///Users/javier/OpenAI-projects/AIProject/ecommerce.db"
 db = SQLDatabase.from_uri(db_uri)
 
 # 2. Importar las APIs
