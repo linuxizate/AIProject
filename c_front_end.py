@@ -37,4 +37,4 @@ if st.session_state.preguntas:
     
 # cuales son los 3 países en los que tenemos más ventas totales.  Saca una tabla con el país  y su total de ventas
 # que porcentaje de las ventas totales representan las ventas de UK?
-
+# dame los 5 productos que mas se han vendido en cantidad, en una tabla que tenga el nombre del producto y el porcentaje sobre el total de unidades de todos los productos. 

@@ -1,7 +1,5 @@
 # 1. Cargar la bbdd con langchain
-# from langchain.sql_database import SQLDatabase
 from langchain.utilities import SQLDatabase
-#db = SQLDatabase.from_uri("sqlite:////ecommerce.db")
 db_uri = "sqlite://///Users/javier/OpenAI-projects/AIProject/ecommerce.db"
 db = SQLDatabase.from_uri(db_uri)
 
@@ -15,9 +13,7 @@ from langchain.chat_models import ChatOpenAI
 llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo')
 
 # 4. Crear la cadena
-#from langchain import SQLDatabaseChain
 from langchain_experimental.sql import SQLDatabaseChain
-#cadena = SQLDatabaseChain.from_llm(llm=llm, database=db, verbose=False)
 cadena = SQLDatabaseChain.from_llm(llm, db, verbose=True)
 
 # 5. Formato personalizado de respuesta
